@@ -73,6 +73,39 @@ public class Flight {
 	public void setDepartureDate(Date departureDate) {
 		this.departureDate = departureDate;
 	}
+	
+	public boolean isValidFlight(){
+		
+		if ( this.carrier == null) {
+			System.out.println("Carrier has to be present for flight");
+			return false;
+		}
+			
+		if ( this.flightNumber == null) {
+			System.out.println("Flight number has to be present for flight");
+			return false;
+		}
+		
+		
+		if ( this.origin == null) {
+			System.out.println("Origin has to be present for flight");
+			return false;
+		}
+		
+		if ( this.destination == null) {
+			System.out.println("Destination has to be present for flight");
+			return false;
+		}
+		
+		if ( this.departureDate == null) {
+			System.out.println("Destination has to be present for flight");
+			return false;
+		}
+		
+		System.out.println("Flight is valid" + this.toString());
+		
+		return true;
+	}
 
 	@Override
 	public int hashCode() {
